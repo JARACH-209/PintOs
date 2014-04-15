@@ -12,7 +12,7 @@ Software Engineering Institute, East China Normal University
 
 Lab 2: Pintos &amp; Project 1
 
-Thanks to
+Thanks
 ------
 rtwilson/Pintos-Project-1
 

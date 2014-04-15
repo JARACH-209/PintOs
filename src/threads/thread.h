@@ -100,6 +100,19 @@ struct thread
 
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
+
+    /* To point out when to wake up itself. */
+    int64_t tick_when_wake_up;
+
+    /* Utilities for priority donation. */
+    struct list donors_list;
+    struct list_elem donors_elem;
+    int original_priority;
+    struct lock *lock_lusted;
+
+    /* Utilities for 4.4BSD Scheduler. */
+    int nice;   /* Niceness is in [-20,20] */
+    int recent_cpu; /* Fixed-point number format for '100 times' test. */
   };
 
 /* If false (default), use round-robin scheduler.
@@ -137,5 +150,20 @@ int thread_get_nice (void);
 void thread_set_nice (int);
 int thread_get_recent_cpu (void);
 int thread_get_load_avg (void);
+
+/* Compare two priorities (gt = greater than). */
+bool is_gt_priority (const struct list_elem *a, const struct list_elem *b, void *aux UNUSED);
+/* Check the priority of the current thread. Is it still the max? */
+void is_cur_max_priority (void);
+
+/* Let the running thread donate its priority if necessary. */
+void donate_priority (void);
+
+/* Utilities for 4.4BSD Scheduler. */
+void mlfqs_priority (struct thread *t);
+void mlfqs_recent_cpu (struct thread *t);
+void mlfqs_load_avg (void);
+void mlfqs_recalculate (void);
+void mlfqs_increment (void);
 
 #endif /* threads/thread.h */

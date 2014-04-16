@@ -1,8 +1,8 @@
 A Brief Configuration Guide in Plain Text
 ====
 
-Derived from 'Pintos安装简明教程_201402200014.docx' by microdog. Thanks to Kainan Zhu!
--------
+####Derived from 'Pintos安装简明教程_201402200014.docx' by microdog. Thanks to Kainan Zhu!
+
 
 ......<br>
 

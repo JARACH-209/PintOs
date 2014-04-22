@@ -40,7 +40,7 @@ pintos -v -- run alarm-multiple<br>
 
 #####And if bochs-2.2.6 doesn't work, try bochs-2.6 or higher!<br>
 cd bochs-2.6<br>
-./configure --with-nogui -–enable-gdb-stub<br>
+./configure --with-nogui --enable-gdb-stub<br>
 make<br>
 sudo make install<br>
 sudo chmod -R 777 /usr/local/<br>

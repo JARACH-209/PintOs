@@ -30,6 +30,7 @@ gedit $PINTOSDIR/src/utils/pintos-gdb<br>
 GDBMACROS=/home/pintos/pintos/src/misc/gdb-macros<br>
 
 cd $PINTOSDIR/src/utils/<br>
+make<br>
 sudo ln squish-pty /usr/local/bin/<br>
 
 cd $PINTOSDIR/src/threads<br>

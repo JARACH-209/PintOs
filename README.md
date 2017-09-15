@@ -1,19 +1,7 @@
-Pintos Project 1
-===================
-Here is nekketsuing's solution.
+# Pintos - Project 1
 
-Course
-------
-Introduction to Operating Systems 2014
+This is an attempt to express the solution to Stanford CS140 Pintos Project 1 in my own words. Would be so glad if that can be helpful to you anyway.
 
-QIAN Weining
-
-Software Engineering Institute, East China Normal University
-
-Lab 2: Pintos &amp; Project 1
-
-Thanks
-------
-rtwilson/Pintos-Project-1
-
-microdog/pintos-project-1
+Thanks to:
+* rtwilson/Pintos-Project-1
+* microdog/pintos-project-1

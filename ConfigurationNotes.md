@@ -1,15 +1,6 @@
-A Brief Configuration Guide in Plain Text
-====
+# Some notes on configuration
 
-(2014-4-15) nekketsuing >> Some is derived from 'Pintos安装简明教程_201402200014.docx' by microdog. Thanks to Kainan Zhu!<br>
-(2014-4-22) nekketsuing >> Some useful note added here!<br>
-
-----
-
-sudo apt-get install build-essential<br>
-sudo apt-get install git-core<br>
-
-git clone http://cs140.stanford.edu/pintos.git<br>
+##### Great thanks to Kainan Zhu's note for basic ideas.
 
 sudo gedit /etc/profile<br>
 export PINTOSDIR=/home/pintos/pintos/<br>
@@ -37,16 +28,14 @@ cd $PINTOSDIR/src/threads<br>
 make check<br>
 pintos -v -- run alarm-multiple<br>
 
-<br>
-
-#####And if bochs-2.2.6 doesn't work, try bochs-2.6 or higher!<br>
+##### You may try bochs-2.6 or higher if bochs-2.2.6 doesn't work properly.
 cd bochs-2.6<br>
 ./configure --with-nogui --enable-gdb-stub<br>
 make<br>
 sudo make install<br>
 sudo chmod -R 777 /usr/local/<br>
 
-#####And if you meet up with an error while compiling under /src/utils/ :<br>
+##### A feasible solution to compilation error under /src/utils/ :
 cd $PINTOSDIR/src/utils/<br>
 gedit Makefile<br>
 Line 4 : LDFLAGS = -lm => LDLIBS = -lm<br>
